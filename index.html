@@ -1,16 +1,22 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <script src="https://js.whop.com/sdk.js"></script> 
+<html lang="en-us">
+<head>
+    <script src="https://js.whop.com/sdk.js"></script>
 </head>
 <body>
-  <script>
-        // Инициализация Whop
-        Whop.init({
-            // Ваш Whop App ID (полученный в панели разработчика)
-            appId: 'app_xLzDPpNYQtaTMz' 
-        });
+    <script>
+        // ЖДЕМ ПОЛНОЙ ЗАГРУЗКИ СТРАНИЦЫ И СКРИПТОВ
+        window.onload = function() {
+            // Убеждаемся, что Whop существует, прежде чем вызывать init()
+            if (typeof Whop !== 'undefined' && typeof Whop.init === 'function') {
+                Whop.init({
+                    appId: 'app_mlfrCTqDM3ZBwf' // Ваш App ID
+                });
+                console.log("Whop SDK успешно инициализирован после загрузки.");
+            } else {
+                console.error("Whop SDK не определен после загрузки.");
+            }
+        };
     </script>
-  
 </body>
 </html>
