@@ -1,19 +1,22 @@
+
+
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
 <head>
     <style>
-    /* Сбрасываем внутренние отступы браузера для полного заполнения экрана */
-    body {
-        margin: 0; /* Убирает внешний отступ (отступы вокруг всего документа) */
-        padding: 0; /* Убирает внутренний отступ */
-        overflow: hidden; /* **КЛЮЧЕВОЙ МОМЕНТ**: Прячет скролл-бары, если они пытаются появиться */
-    }
-    canvas {
-        display: block; /* Убирает лишние пиксели под канвасом */
-    }
-</style>
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            .iframe-container {
+                height: 100%; /* Ensure container also has 100% height */
+            }
+    </style>
 </head>
 <body>
-    <iframe src="https://clear-office.netlify.app/"  width="1920px" height="1080px"></iframe>
+        <div class="iframe-container">
+            <iframe src="https://clear-office.netlify.app/" style="width: 100%; height: 100%; border: none;"></iframe>
+        </div>
 </body>
 </html>
